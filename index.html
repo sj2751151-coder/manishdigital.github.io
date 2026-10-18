@@ -1,152 +1,336 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Manish Digital Service - Website, Android App, Billing Software, Google Business, WhatsApp Business, Digital Design aur Online Services.">
-<title>Manish Digital Service</title>
-<style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f6f8fc;color:#182033}
-a{text-decoration:none;color:inherit}
-.container{width:min(1100px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #e8ebf2}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:22px;font-weight:800}
-.logo span{color:#315efb}
-.navlinks{display:flex;gap:22px;font-size:14px}
-.menu{display:none;border:0;background:#eef2ff;padding:10px 12px;border-radius:10px;font-size:20px}
-.hero{padding:80px 0 65px;background:linear-gradient(135deg,#eef3ff,#fff)}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
-.badge{display:inline-block;background:#e6ecff;color:#315efb;padding:8px 13px;border-radius:30px;font-size:13px;font-weight:700}
-h1{font-size:clamp(38px,6vw,64px);line-height:1.03;margin:18px 0}
-.hero p{font-size:18px;line-height:1.7;color:#5b6475;max-width:650px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:12px;font-weight:700;border:1px solid #dfe4ef}
-.primary{background:#315efb;color:white;border-color:#315efb}
-.card{background:#fff;border:1px solid #e7eaf1;border-radius:22px;padding:28px;box-shadow:0 15px 45px #243b7a12}
-.hero-card{min-height:300px;display:flex;flex-direction:column;justify-content:center}
-.hero-card .big{font-size:58px;margin-bottom:15px}
-section{padding:70px 0}
-.section-title{text-align:center;max-width:700px;margin:0 auto 38px}
-.section-title h2{font-size:34px;margin:0 0 10px}
-.section-title p{color:#667085;line-height:1.6}
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service{background:#fff;border:1px solid #e7eaf1;border-radius:18px;padding:23px;transition:.2s}
-.service:hover{transform:translateY(-4px);box-shadow:0 12px 35px #243b7a12}
-.icon{font-size:30px}
-.service h3{font-size:18px;margin:14px 0 8px}
-.service p{color:#667085;font-size:14px;line-height:1.6}
-.about{background:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.list{display:grid;gap:12px}
-.list div{padding:15px;border:1px solid #e7eaf1;border-radius:13px;background:#fafbfe}
-.contact{background:#111827;color:#fff}
-.contact p{color:#c7cedb}
-.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
-.contact-actions{display:flex;gap:12px;flex-wrap:wrap}
-.contact .btn{background:#fff;color:#111827}
-.contact .whatsapp{background:#25d366;color:#fff;border-color:#25d366}
-footer{background:#0b1220;color:#9da8bb;text-align:center;padding:22px;font-size:13px}
-@media(max-width:850px){
-.services{grid-template-columns:repeat(2,1fr)}
-.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}
-.navlinks{display:none}
-.menu{display:block}
-.hero{padding-top:55px}
-}
-@media(max-width:520px){
-.services{grid-template-columns:1fr}
-section{padding:55px 0}
-h1{font-size:42px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manish Digital Service provides professional websites, Android apps, billing software, business profile setup, digital design and practical online solutions for growing businesses.">
+  <meta name="theme-color" content="#07152f">
+  <title>Manish Digital Service | Digital Solutions That Move Business Forward</title>
+  <style>
+    :root {
+      --navy: #07152f;
+      --navy-2: #0b2147;
+      --blue: #377dff;
+      --blue-light: #e8f0ff;
+      --ink: #15233e;
+      --muted: #68758d;
+      --line: #e1e8f4;
+      --surface: #ffffff;
+      --bg: #f4f7fc;
+      --shadow: 0 22px 55px rgba(14, 38, 82, .10);
+      --shadow-3d: 0 12px 0 #dbe5f5, 0 22px 42px rgba(7, 21, 47, .13);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--ink); background: var(--bg); line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px); border-bottom: 1px solid rgba(225,232,244,.9);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 850; letter-spacing: -.5px; font-size: 19px; white-space: nowrap; }
+    .brand-mark {
+      display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px;
+      color: white; background: linear-gradient(145deg, #4d91ff, #1651d8);
+      box-shadow: 0 5px 0 #103ca7, 0 10px 22px rgba(37,99,235,.25); font-weight: 900;
+    }
+    .brand-name span { color: var(--blue); }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; color: #52617a; font-weight: 650; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta, .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 13px;
+      padding: 13px 19px; font-size: 14px; font-weight: 750; border: 1px solid transparent; transition: box-shadow .2s, background .2s, transform .2s;
+    }
+    .nav-cta, .btn-primary { color: #fff; background: linear-gradient(135deg, #4389ff, #2459df); box-shadow: 0 5px 0 #1744b8, 0 12px 22px rgba(37,99,235,.2); }
+    .nav-cta:hover, .btn-primary:hover { box-shadow: 0 3px 0 #1744b8, 0 8px 17px rgba(37,99,235,.22); transform: translateY(2px); }
+    .btn-secondary { background: #fff; color: var(--navy); border-color: #dbe4f2; box-shadow: 0 4px 0 #e0e7f1; }
+    .btn-secondary:hover { background: #f8faff; transform: translateY(2px); box-shadow: 0 2px 0 #e0e7f1; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; color: var(--navy); border-radius: 12px; padding: 10px 13px; font-size: 20px; }
+    .hero {
+      position: relative; overflow: hidden; padding: 88px 0 82px;
+      background: radial-gradient(circle at 78% 18%, rgba(78,139,255,.16), transparent 28%),
+                  radial-gradient(circle at 8% 95%, rgba(78,139,255,.10), transparent 27%),
+                  linear-gradient(135deg, #f8faff 0%, #edf3ff 52%, #ffffff 100%);
+    }
+    .hero::before {
+      content: ""; position: absolute; width: 330px; height: 330px; right: -115px; top: -150px;
+      border: 1px solid rgba(55,125,255,.18); border-radius: 42px; transform: rotate(24deg);
+      box-shadow: 0 0 0 28px rgba(55,125,255,.035), 0 0 0 58px rgba(55,125,255,.025);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 64px; position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; color: #2157c8; background: #e6efff; border: 1px solid #d5e4ff; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #377dff; box-shadow: 0 0 0 4px rgba(55,125,255,.13); }
+    h1 { max-width: 690px; margin: 22px 0 19px; font-size: clamp(42px, 5.4vw, 68px); letter-spacing: -2.8px; line-height: 1.04; color: var(--navy); }
+    h1 span { color: var(--blue); }
+    .hero-copy { max-width: 620px; margin: 0; color: #5f6e86; font-size: 17px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 29px; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; color: #617089; font-size: 12px; font-weight: 700; }
+    .trust-row span { display: inline-flex; align-items: center; gap: 7px; }
+    .trust-row b { color: #1d9b68; font-size: 15px; }
+    .visual-wrap { position: relative; padding: 20px 16px 28px 20px; perspective: 1000px; }
+    .visual-panel {
+      position: relative; min-height: 380px; padding: 27px; border-radius: 28px; overflow: hidden;
+      color: white; background: linear-gradient(145deg, #102953 0%, #07152f 74%);
+      border: 1px solid rgba(255,255,255,.22); box-shadow: 0 15px 0 #d7e2f4, 0 30px 65px rgba(7,21,47,.22);
+    }
+    .visual-panel::before { content: ""; position: absolute; width: 290px; height: 290px; right: -75px; top: -95px; border-radius: 50%; background: radial-gradient(circle, rgba(65,139,255,.5), rgba(65,139,255,0) 70%); }
+    .visual-panel::after { content: ""; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px); background-size: 30px 30px; mask-image: linear-gradient(to bottom, black, transparent 85%); }
+    .panel-top, .dashboard, .floating-note { position: relative; z-index: 2; }
+    .panel-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .panel-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #a9c6ff; font-weight: 800; }
+    .status { border: 1px solid rgba(112,239,186,.25); color: #8df0c4; background: rgba(37,192,128,.12); padding: 6px 10px; border-radius: 99px; font-size: 10px; font-weight: 800; }
+    .panel-heading { margin: 29px 0 7px; font-size: 27px; line-height: 1.2; letter-spacing: -.7px; }
+    .panel-sub { margin: 0; color: #b9c9e6; font-size: 13px; }
+    .dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-top: 25px; }
+    .dash-tile { padding: 16px; border-radius: 17px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+    .dash-icon { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: 12px; border-radius: 11px; background: rgba(74,140,255,.22); font-size: 19px; }
+    .dash-tile strong { display: block; font-size: 13px; }
+    .dash-tile small { display: block; margin-top: 3px; color: #b5c5e0; font-size: 11px; }
+    .floating-note { position: absolute; right: -7px; bottom: 0; display: flex; align-items: center; gap: 12px; padding: 14px 17px; border-radius: 16px; background: #fff; color: var(--navy); box-shadow: 0 15px 35px rgba(7,21,47,.17); border: 1px solid #e5ecf7; }
+    .note-icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: #1765e9; background: #eaf2ff; font-size: 20px; }
+    .floating-note strong { display: block; font-size: 12px; }
+    .floating-note small { display: block; font-size: 11px; color: var(--muted); }
+    section { padding: 86px 0; }
+    .section-heading { max-width: 700px; text-align: center; margin: 0 auto 44px; }
+    .section-kicker { color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: 1.7px; text-transform: uppercase; }
+    h2 { color: var(--navy); font-size: clamp(30px, 4vw, 42px); line-height: 1.15; letter-spacing: -1.2px; margin: 12px 0 13px; }
+    .section-heading p { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.8; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+    .service-card {
+      position: relative; min-height: 240px; padding: 25px 22px; border-radius: 20px; background: var(--surface);
+      border: 1px solid #e0e8f5; box-shadow: 0 5px 0 #e5ebf5, 0 12px 26px rgba(19,44,86,.045);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; overflow: hidden;
+    }
+    .service-card::after { content: ""; position: absolute; width: 90px; height: 90px; right: -42px; bottom: -45px; border-radius: 24px; transform: rotate(28deg); background: #f0f5ff; }
+    .service-card:hover { transform: translateY(-5px); border-color: #c5d8ff; box-shadow: 0 8px 0 #d7e4fa, 0 20px 35px rgba(19,44,86,.10); }
+    .service-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: linear-gradient(145deg, #f0f5ff, #dce9ff); color: #225dd4; font-size: 25px; box-shadow: 0 4px 0 #cfdef8; }
+    .service-card h3 { margin: 23px 0 8px; color: var(--navy); font-size: 17px; letter-spacing: -.25px; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+    .service-number { position: absolute; top: 25px; right: 22px; color: #c4d0e4; font-size: 11px; font-weight: 850; letter-spacing: 1px; }
+    .about-section { background: #fff; border-top: 1px solid #e9eef7; border-bottom: 1px solid #e9eef7; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-copy h2 { max-width: 520px; }
+    .about-copy p { color: var(--muted); line-height: 1.9; font-size: 15px; }
+    .about-cta { margin-top: 25px; }
+    .benefits { display: grid; gap: 14px; }
+    .benefit {
+      display: flex; align-items: flex-start; gap: 15px; padding: 19px; border: 1px solid #e3eaf5;
+      background: linear-gradient(145deg, #fff, #f8faff); border-radius: 17px; box-shadow: 0 4px 0 #edf1f8;
+    }
+    .benefit-check { flex: 0 0 35px; height: 35px; display: grid; place-items: center; border-radius: 11px; color: #147e5a; background: #e3f8ee; font-weight: 900; }
+    .benefit strong { display: block; font-size: 14px; color: var(--navy); }
+    .benefit span { display: block; margin-top: 3px; font-size: 12px; color: var(--muted); }
+    .contact-section { color: white; background: radial-gradient(circle at 90% 0%, rgba(61,127,255,.24), transparent 32%), linear-gradient(130deg, #0b2147, #07152f 70%); }
+    .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 50px; }
+    .contact-section .section-kicker { color: #8ab5ff; }
+    .contact-section h2 { color: #fff; max-width: 570px; }
+    .contact-section p { max-width: 570px; color: #bdcbe2; line-height: 1.85; font-size: 15px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 26px; }
+    .contact-section .btn-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,.28); box-shadow: 0 4px 0 rgba(255,255,255,.08); }
+    .contact-card { padding: 27px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.07); border-radius: 22px; box-shadow: inset 0 1px 0 rgba(255,255,255,.09); }
+    .contact-card h3 { margin: 0 0 17px; font-size: 18px; }
+    .contact-line { display: flex; align-items: center; gap: 12px; padding: 13px 0; color: #d4def0; font-size: 13px; border-top: 1px solid rgba(255,255,255,.12); }
+    .contact-line b { color: white; font-weight: 700; }
+    footer { padding: 25px 0; color: #aab8cf; background: #050f23; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-inner strong { color: #fff; }
+    .back-top { color: #d5e2fb; }
+    @media (max-width: 980px) {
+      .hero-grid { gap: 35px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav-links { gap: 16px; }
+      .about-grid, .contact-grid { gap: 35px; }
+    }
+    @media (max-width: 720px) {
+      .container { width: min(100% - 30px, 560px); }
+      .nav { min-height: 68px; }
+      .brand { font-size: 16px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .menu-toggle { display: block; }
+      .nav-cta { display: none; }
+      .nav-links {
+        display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 16px 20px 20px;
+        flex-direction: column; align-items: stretch; gap: 0; background: #fff; border-bottom: 1px solid var(--line);
+        box-shadow: 0 18px 25px rgba(7,21,47,.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 5px; border-bottom: 1px solid #eef2f8; }
+      .nav-links a:last-child { border-bottom: 0; }
+      .hero { padding: 62px 0 60px; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 35px; }
+      h1 { font-size: clamp(42px, 11vw, 58px); letter-spacing: -2px; }
+      .hero-copy { font-size: 15px; }
+      .visual-wrap { padding: 8px 5px 24px; }
+      .visual-panel { min-height: auto; padding: 23px; }
+      .panel-heading { font-size: 24px; }
+      .floating-note { right: 0; }
+      section { padding: 65px 0; }
+      .section-heading { margin-bottom: 32px; }
+      .about-grid, .contact-grid { gap: 30px; }
+      .contact-card { padding: 22px; }
+    }
+    @media (max-width: 430px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; padding: 23px; }
+      .service-card h3 { margin-top: 17px; }
+      .hero-actions .btn { width: 100%; }
+      .dashboard { gap: 9px; }
+      .dash-tile { padding: 13px; }
+      .floating-note { position: relative; right: auto; bottom: auto; margin: -4px 12px 0; }
+      .footer-inner { justify-content: center; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Manish Digital Service home">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">Manish <span>Digital</span></span>
+      </a>
+      <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Start a Project <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+    </div>
+  </header>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">Manish <span>Digital</span></a>
-    <nav class="navlinks">
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="menu" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">☰</button>
-  </div>
-</header>
-
-<main id="home">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge">Digital Solutions for Local Businesses</span>
-      <h1>Apne business ko <span style="color:#315efb">Digital</span> banaiye.</h1>
-      <p>Manish Digital Service par website, Android app, billing software, Google Business, WhatsApp Business aur digital design jaise practical solutions ek jagah milte hain.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#services">Services Dekhein</a>
-        <a class="btn" href="#contact">Contact Karein</a>
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Digital solutions for growing businesses</span>
+          <h1>Build a stronger <span>digital</span> business.</h1>
+          <p class="hero-copy">Practical digital services to help your business look professional, reach more customers, and work smarter—from websites and apps to business tools and creative design.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Explore Our Services <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#contact">Talk to Our Team</a>
+          </div>
+          <div class="trust-row">
+            <span><b>✓</b> Mobile-friendly solutions</span>
+            <span><b>✓</b> Practical business support</span>
+          </div>
+        </div>
+        <div class="visual-wrap" aria-label="Digital services dashboard illustration">
+          <div class="visual-panel">
+            <div class="panel-top">
+              <span class="panel-label">Your digital workspace</span>
+              <span class="status">● Ready to build</span>
+            </div>
+            <h2 class="panel-heading">Ideas into digital<br>experiences.</h2>
+            <p class="panel-sub">One place for the tools your business needs.</p>
+            <div class="dashboard">
+              <div class="dash-tile"><div class="dash-icon">⌘</div><strong>Websites</strong><small>Professional online presence</small></div>
+              <div class="dash-tile"><div class="dash-icon">▣</div><strong>Applications</strong><small>Useful digital products</small></div>
+              <div class="dash-tile"><div class="dash-icon">▤</div><strong>Business Tools</strong><small>Smarter daily workflows</small></div>
+              <div class="dash-tile"><div class="dash-icon">✦</div><strong>Creative Design</strong><small>Consistent brand visuals</small></div>
+            </div>
+          </div>
+          <div class="floating-note">
+            <div class="note-icon">↗</div>
+            <div><strong>Designed for real businesses</strong><small>Clear, useful, and professional</small></div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card hero-card">
-      <div class="big">💻📱</div>
-      <h2>Simple. Professional. Digital.</h2>
-      <p>Small businesses ke liye affordable digital setup aur support.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-title">
-      <h2>Hamari Services</h2>
-      <p>Aapke business ki online presence aur daily digital needs ke liye solutions.</p>
-    </div>
-    <div class="services">
-      <div class="service"><div class="icon">🌐</div><h3>Website & Web App</h3><p>Business ke liye fast, mobile-friendly website aur web applications.</p></div>
-      <div class="service"><div class="icon">📱</div><h3>Android App</h3><p>Business requirements ke according simple Android applications.</p></div>
-      <div class="service"><div class="icon">🧾</div><h3>Billing Software</h3><p>Billing, customer aur shop-management ke liye digital solutions.</p></div>
-      <div class="service"><div class="icon">📍</div><h3>Google Business</h3><p>Google par business profile setup aur basic optimization.</p></div>
-      <div class="service"><div class="icon">💬</div><h3>WhatsApp Business</h3><p>Business profile, catalog aur customer communication setup.</p></div>
-      <div class="service"><div class="icon">🎨</div><h3>Digital Design</h3><p>Poster, offer creatives aur social-media graphics.</p></div>
-      <div class="service"><div class="icon">🛠️</div><h3>Maintenance</h3><p>Existing website/app mein updates, fixes aur basic support.</p></div>
-      <div class="service"><div class="icon">📄</div><h3>Online Services</h3><p>Digital forms aur common online business-related assistance.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="about">
-  <div class="container about-grid">
-    <div>
-      <div class="section-title" style="text-align:left;margin:0">
-        <h2>Manish Digital Service</h2>
-        <p>Local shops, startups aur small businesses ko digital tools use karne mein help karne ke liye ek simple service platform.</p>
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">What we do</span>
+          <h2>Digital services built around your needs.</h2>
+          <p>Choose the support that fits your business today, with practical solutions designed to grow with you.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card"><span class="service-number">01</span><div class="service-icon">🌐</div><h3>Website &amp; Web App</h3><p>Fast, responsive websites and web applications that present your business professionally on every screen.</p></article>
+          <article class="service-card"><span class="service-number">02</span><div class="service-icon">📱</div><h3>Android Apps</h3><p>Purpose-built Android applications designed around your business goals and customer needs.</p></article>
+          <article class="service-card"><span class="service-number">03</span><div class="service-icon">🧾</div><h3>Billing Software</h3><p>Digital billing and simple business tools to help organize sales, customers, and everyday operations.</p></article>
+          <article class="service-card"><span class="service-number">04</span><div class="service-icon">📍</div><h3>Google Business</h3><p>Business profile setup and basic optimization to help customers discover your business on Google.</p></article>
+          <article class="service-card"><span class="service-number">05</span><div class="service-icon">💬</div><h3>WhatsApp Business</h3><p>Set up your business profile, product catalog, and customer communication experience.</p></article>
+          <article class="service-card"><span class="service-number">06</span><div class="service-icon">✦</div><h3>Digital Design</h3><p>Promotional graphics, social media creatives, and visual materials that keep your brand consistent.</p></article>
+          <article class="service-card"><span class="service-number">07</span><div class="service-icon">⚙</div><h3>Website Maintenance</h3><p>Website and app updates, basic fixes, and ongoing support to keep your digital presence up to date.</p></article>
+          <article class="service-card"><span class="service-number">08</span><div class="service-icon">▣</div><h3>Online Services</h3><p>Practical assistance with digital forms and common online tasks for individuals and businesses.</p></article>
+        </div>
       </div>
-      <div class="buttons"><a class="btn primary" href="#contact">Project Discuss Karein</a></div>
-    </div>
-    <div class="list">
-      <div>✅ Mobile-friendly solutions</div>
-      <div>✅ Simple aur practical setup</div>
-      <div>✅ Business ke according customization</div>
-      <div>✅ Post-setup basic support</div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact" class="contact">
-  <div class="container contact-box">
-    <div>
-      <h2>Apne business ke liye baat karein</h2>
-      <p>Website, app ya digital service ke liye WhatsApp ya phone par contact karein.</p>
-    </div>
-    <div class="contact-actions">
-      <!-- Apna number neeche dono jagah replace karein -->
-      <a class="btn whatsapp" href="https://wa.me/919059318241?text=Namaste%20Manish%20Digital%2C%20mujhe%20aapki%20service%20ke%20baare%20mein%20jaankari%20chahiye.">💬 WhatsApp</a>
-      <a class="btn" href="tel:+919059318241">📞 Call Now</a>
-    </div>
-  </div>
-</section>
-</main>
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="section-kicker">About us</span>
+          <h2>A reliable digital partner for your next step.</h2>
+          <p>Manish Digital Service helps local businesses and growing teams make better use of digital tools. We focus on clear communication, practical setup, and solutions shaped around the way your business works.</p>
+          <p>Whether you are building your first website or improving an existing digital setup, we can help you plan the next step.</p>
+          <a class="btn btn-primary about-cta" href="#contact">Discuss Your Project <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="benefits">
+          <div class="benefit"><div class="benefit-check">✓</div><div><strong>Mobile-first experience</strong><span>Layouts designed to work smoothly on phones, tablets, and desktops.</span></div></div>
+          <div class="benefit"><div class="benefit-check">✓</div><div><strong>Simple, practical setup</strong><span>Digital tools selected to meet real needs without unnecessary complexity.</span></div></div>
+          <div class="benefit"><div class="benefit-check">✓</div><div><strong>Solutions tailored to your business</strong><span>Clear scope and customization based on your requirements.</span></div></div>
+          <div class="benefit"><div class="benefit-check">✓</div><div><strong>Support after setup</strong><span>Help with basic updates and improvements as your needs change.</span></div></div>
+        </div>
+      </div>
+    </section>
 
-<footer>© 2026 Manish Digital Service • All Rights Reserved</footer>
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div>
+          <span class="section-kicker">Let's work together</span>
+          <h2>Have a project in mind? Let's make it happen.</h2>
+          <p>Tell us what your business needs. Contact Manish Digital Service to discuss a website, app, business tool, or creative project.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/919059318241?text=Hello%20Manish%20Digital%20Service%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
+            <a class="btn btn-secondary" href="tel:+919059318241">☎ Call Now</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3>Get in touch</h3>
+          <div class="contact-line"><span>💬</span><span>WhatsApp <b>Business enquiries</b></span></div>
+          <div class="contact-line"><span>☎</span><span>Phone <b>Direct contact</b></span></div>
+          <div class="contact-line"><span>⌖</span><span>Service area <b>Harraiya Satgharwa, Balrampur, Uttar Pradesh</b></span></div>
+          <div class="contact-line"><span>◷</span><span>Enquiries <b>Message anytime</b></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 <strong>Manish Digital Service</strong>. All rights reserved.</span>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? '✕' : '☰';
+    });
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = '☰';
+      });
+    });
+  </script>
 </body>
 </html>
