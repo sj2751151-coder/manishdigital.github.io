@@ -264,6 +264,9 @@
     .tool-card textarea{resize:vertical}
     .tool-result{margin-top:15px;padding:13px;border-radius:11px;background:rgba(55,125,255,.12);border:1px solid rgba(105,164,255,.18);color:#dce9ff;font-size:13px;line-height:1.7;min-height:48px}
     .tool-result strong{color:#fff}
+    .tool-action{padding:9px 11px;border:1px solid rgba(120,170,255,.3);border-radius:9px;background:rgba(55,125,255,.16);color:#dce9ff;font-size:11px;font-weight:800;cursor:pointer}
+    .tool-action:hover{background:rgba(55,125,255,.3);border-color:#5793ff}
+
     @media(max-width:980px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-tools-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:720px){.platform-grid,.quick-tools-grid{grid-template-columns:1fr}.platform-card{min-height:210px}.tool-card{padding:19px}}
 
@@ -368,6 +371,29 @@
             <label for="word-input">Your text</label><textarea id="word-input" rows="4" placeholder="Start typing or paste your text..."></textarea>
             <div class="tool-result" id="word-result" aria-live="polite">0 words · 0 characters</div>
           </article>
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">₹</span><div><h3>EMI Calculator</h3><p>Estimate your monthly loan payment.</p></div></div>
+            <label for="emi-principal">Loan amount (₹)</label><input id="emi-principal" type="number" min="0" inputmode="decimal" placeholder="e.g. 200000">
+            <label for="emi-rate">Annual interest rate (%)</label><input id="emi-rate" type="number" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 10">
+            <label for="emi-months">Loan tenure (months)</label><input id="emi-months" type="number" min="1" step="1" inputmode="numeric" placeholder="e.g. 24">
+            <div class="tool-result" id="emi-result" aria-live="polite">Enter loan details to estimate EMI.</div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">🎂</span><div><h3>Age Calculator</h3><p>Calculate your age from your date of birth.</p></div></div>
+            <label for="birth-date">Date of birth</label><input id="birth-date" type="date">
+            <div class="tool-result" id="age-result" aria-live="polite">Choose your date of birth.</div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">Aa</span><div><h3>Text Case Converter</h3><p>Change text to upper, lower or title case.</p></div></div>
+            <label for="case-input">Your text</label><textarea id="case-input" rows="3" placeholder="Type or paste text here..."></textarea>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+              <button class="tool-action" type="button" data-case="upper">UPPERCASE</button>
+              <button class="tool-action" type="button" data-case="lower">lowercase</button>
+              <button class="tool-action" type="button" data-case="title">Title Case</button>
+              <button class="tool-action" type="button" data-case="sentence">Sentence case</button>
+            </div>
+            <div class="tool-result" id="case-result" aria-live="polite">Converted text will appear here.</div>
+          </article>
         </div>
       </div>
     </section>
@@ -448,6 +474,14 @@
     ga.addEventListener('input',calcGST);gr.addEventListener('change',calcGST);
     const wi=document.getElementById('word-input'),wo=document.getElementById('word-result');
     wi.addEventListener('input',()=>{const s=wi.value.trim(),n=s?s.split(/\s+/).length:0;wo.textContent=n+' words · '+wi.value.length+' characters';});
+    const ep=document.getElementById('emi-principal'),er=document.getElementById('emi-rate'),em=document.getElementById('emi-months'),eo=document.getElementById('emi-result');
+    function calcEMI(){if(ep.value===''||er.value===''||em.value===''||Number(ep.value)<=0||Number(er.value)<0||Number(em.value)<=0){eo.textContent='Enter a valid loan amount, interest rate and tenure.';return;}const p=Number(ep.value),r=Number(er.value)/1200,n=Number(em.value);const emi=r===0?p/n:p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);const total=emi*n;eo.textContent='Monthly EMI: ₹'+emi.toLocaleString('en-IN',{maximumFractionDigits:2})+' · Total interest: ₹'+(total-p).toLocaleString('en-IN',{maximumFractionDigits:2});}
+    [ep,er,em].forEach(el=>el.addEventListener('input',calcEMI));
+    const bd=document.getElementById('birth-date'),ao=document.getElementById('age-result');
+    bd.max=new Date().toISOString().slice(0,10);
+    bd.addEventListener('change',()=>{if(!bd.value){ao.textContent='Choose your date of birth.';return;}const dob=new Date(bd.value+'T00:00:00'),today=new Date();if(dob>today){ao.textContent='Date of birth cannot be in the future.';return;}let years=today.getFullYear()-dob.getFullYear(),months=today.getMonth()-dob.getMonth(),days=today.getDate()-dob.getDate();if(days<0){months--;days+=new Date(today.getFullYear(),today.getMonth(),0).getDate();}if(months<0){years--;months+=12;}ao.textContent=years+' years · '+months+' months · '+days+' days';});
+    const ci=document.getElementById('case-input'),co=document.getElementById('case-result');
+    document.querySelectorAll('[data-case]').forEach(btn=>btn.addEventListener('click',()=>{const s=ci.value;let out=s;if(btn.dataset.case==='upper')out=s.toUpperCase();if(btn.dataset.case==='lower')out=s.toLowerCase();if(btn.dataset.case==='title')out=s.toLowerCase().replace(/\\b\\p{L}/gu,ch=>ch.toUpperCase());if(btn.dataset.case==='sentence')out=s.toLowerCase().replace(/(^\\s*|[.!?]\\s+)(\\p{L})/gu,(m,a,b)=>a+b.toUpperCase());co.textContent=out||'Enter some text first.';}));
 
     const menuButton = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('.nav-links');
