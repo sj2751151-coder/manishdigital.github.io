@@ -190,6 +190,57 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
     }
+
+    /* Premium Nexora-inspired visual refresh — original navy/blue palette retained */
+    :root {
+      --navy:#07152f; --navy-2:#0b2147; --blue:#377dff;
+      --bg:#07152f; --ink:#eef4ff; --muted:#9aabc8; --line:rgba(164,190,235,.16);
+      --surface:#0c1d3b; --shadow:0 24px 70px rgba(0,0,0,.25);
+    }
+    body{background:#07152f;color:#eef4ff}
+    .site-header{background:rgba(7,21,47,.86);border-bottom:1px solid rgba(164,190,235,.14)}
+    .brand{color:#f5f8ff}.nav-links{color:#aebed9}
+    .nav-links a:hover{color:#72a5ff}
+    .menu-toggle{background:#10264a;color:#fff;border-color:var(--line)}
+    .hero{padding:100px 0 92px;background:radial-gradient(ellipse at 78% 22%,rgba(55,125,255,.23),transparent 32%),radial-gradient(ellipse at 10% 90%,rgba(55,125,255,.12),transparent 34%),#07152f}
+    .hero::before{border-color:rgba(91,151,255,.22);box-shadow:0 0 0 28px rgba(55,125,255,.045),0 0 0 58px rgba(55,125,255,.025)}
+    .eyebrow{color:#a9c9ff;background:rgba(55,125,255,.12);border-color:rgba(100,157,255,.28)}
+    h1{color:#f4f7ff}h1 span{color:#70a5ff}
+    .hero-copy{color:#a8b8d4}
+    .trust-row{color:#aebed8}.trust-row b{color:#77a9ff}
+    .visual-wrap{filter:drop-shadow(0 25px 40px rgba(0,0,0,.24))}
+    .visual-panel{background:linear-gradient(145deg,#122d58,#091a37 78%);border:1px solid rgba(127,171,255,.25);box-shadow:0 12px 0 #10264a,0 34px 70px rgba(0,0,0,.35)}
+    .floating-note{background:#10264a;color:#f4f7ff;border-color:rgba(145,180,245,.2)}
+    .floating-note small{color:#a8bad8}.note-icon{background:rgba(55,125,255,.18);color:#8bb5ff}
+    #services{background:#091a36}
+    .section-heading h2,.about-copy h2{color:#f2f6ff}
+    .section-heading p,.about-copy p{color:#9eafcc}
+    .section-kicker{color:#78a9ff}
+    .service-card{background:linear-gradient(145deg,#10264a,#0b1d3b);border:1px solid rgba(151,180,230,.16);box-shadow:0 5px 0 #07152f,0 18px 35px rgba(0,0,0,.16)}
+    .service-card::after{background:rgba(55,125,255,.08)}
+    .service-card:hover{border-color:rgba(95,153,255,.55);box-shadow:0 8px 0 #07152f,0 24px 45px rgba(0,0,0,.26)}
+    .service-card h3{color:#f0f5ff}.service-card p{color:#a4b4cf}
+    .service-number{color:#6680a8}
+    .service-icon{background:linear-gradient(145deg,rgba(75,139,255,.24),rgba(55,125,255,.08));color:#8bb5ff;box-shadow:0 4px 0 rgba(55,125,255,.18)}
+    .about-section{background:#07152f;border-color:rgba(164,190,235,.13)}
+    .benefit{background:linear-gradient(145deg,#10264a,#0b1d3b);border-color:rgba(151,180,230,.16);box-shadow:0 4px 0 #050f23}
+    .benefit strong{color:#f0f5ff}.benefit span{color:#a4b4cf}
+    .benefit-check{background:rgba(55,125,255,.17);color:#8bb5ff}
+    .contact-section{background:radial-gradient(circle at 90% 0%,rgba(61,127,255,.2),transparent 32%),linear-gradient(130deg,#0b2147,#050f23 80%)}
+    .contact-card{background:rgba(17,43,82,.68);border-color:rgba(151,180,230,.2)}
+    .contact-line{color:#bdcbe2}
+    .btn-secondary{background:#10264a;color:#eaf1ff;border-color:rgba(151,180,230,.22);box-shadow:0 4px 0 #07152f}
+    .btn-secondary:hover{background:#16335f}
+    footer{background:#030b19;border-top:1px solid rgba(164,190,235,.12)}
+    .back-top{color:#a9c9ff}
+    .nav-cta,.btn-primary{background:linear-gradient(135deg,#4b91ff,#2459df);box-shadow:0 5px 0 #1744b8,0 12px 25px rgba(37,99,235,.24)}
+    .service-card,.benefit,.contact-card,.visual-panel{backdrop-filter:blur(12px)}
+    @media(max-width:720px){
+      .hero{padding:70px 0 65px}
+      .nav-links{background:#091a36;border-color:rgba(164,190,235,.15)}
+      .nav-links a{color:#dce7fb;border-color:rgba(164,190,235,.12)}
+    }
+
   </style>
 </head>
 <body>
