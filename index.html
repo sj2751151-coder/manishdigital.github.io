@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Manish Digital Service provides professional websites, Android apps, billing software, business profile setup, digital design and practical online solutions for growing businesses.">
+  <meta name="description" content="Manish Digital Service is a technology company and digital platform offering useful online tools, digital services, websites, apps and business solutions.">
   <meta name="theme-color" content="#07152f">
-  <title>Manish Digital Service | Digital Solutions That Move Business Forward</title>
+  <title>Manish Digital Service | Technology, Tools & Digital Solutions</title>
   <style>
     :root {
       --navy: #07152f;
@@ -241,6 +241,32 @@
       .nav-links a{color:#dce7fb;border-color:rgba(164,190,235,.12)}
     }
 
+
+    .platform-section{background:#07152f}
+    .platform-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+    .platform-card{display:flex;flex-direction:column;min-height:245px;padding:24px;border:1px solid rgba(151,180,230,.17);border-radius:20px;background:linear-gradient(145deg,#11294f,#0b1c39);box-shadow:0 16px 35px rgba(0,0,0,.15);transition:transform .2s,border-color .2s}
+    .platform-card:hover{transform:translateY(-5px);border-color:rgba(105,164,255,.6)}
+    .platform-icon{display:grid;place-items:center;width:49px;height:49px;border-radius:15px;background:rgba(55,125,255,.17);color:#8bb5ff;font-size:25px}
+    .platform-tag{margin-top:21px;color:#82adf5;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+    .platform-card h3{margin:7px 0;color:#f1f6ff;font-size:18px}
+    .platform-card p{margin:0;color:#a5b6d3;font-size:13px;line-height:1.7}
+    .platform-link{margin-top:auto;padding-top:17px;color:#8bb5ff;font-size:12px;font-weight:800}
+    .quick-tools-section{background:#091a36}
+    .quick-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .tool-card{padding:23px;border:1px solid rgba(151,180,230,.17);border-radius:19px;background:linear-gradient(145deg,#11294f,#0b1c39);box-shadow:0 16px 35px rgba(0,0,0,.14)}
+    .tool-heading{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+    .tool-icon{display:grid;place-items:center;flex:0 0 44px;height:44px;border-radius:13px;background:rgba(55,125,255,.18);color:#9bc0ff;font-weight:800;font-size:20px}
+    .tool-heading h3{margin:0;color:#f1f6ff;font-size:16px}
+    .tool-heading p{margin:3px 0 0;color:#9eafcc;font-size:11px}
+    .tool-card label{display:block;margin:12px 0 6px;color:#c8d6ee;font-size:12px;font-weight:700}
+    .tool-card input,.tool-card select,.tool-card textarea{width:100%;padding:11px 12px;border:1px solid rgba(151,180,230,.22);border-radius:10px;background:#071832;color:#f4f7ff;font:inherit;font-size:14px;outline:none}
+    .tool-card input:focus,.tool-card select:focus,.tool-card textarea:focus{border-color:#5793ff;box-shadow:0 0 0 3px rgba(55,125,255,.14)}
+    .tool-card textarea{resize:vertical}
+    .tool-result{margin-top:15px;padding:13px;border-radius:11px;background:rgba(55,125,255,.12);border:1px solid rgba(105,164,255,.18);color:#dce9ff;font-size:13px;line-height:1.7;min-height:48px}
+    .tool-result strong{color:#fff}
+    @media(max-width:980px){.platform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-tools-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.platform-grid,.quick-tools-grid{grid-template-columns:1fr}.platform-card{min-height:210px}.tool-card{padding:19px}}
+
   </style>
 </head>
 <body>
@@ -252,7 +278,8 @@
       </a>
       <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
+        <a href="#platform">Platform</a>
+        <a href="#services">Company Services</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -265,46 +292,90 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Digital solutions for growing businesses</span>
-          <h1>Build a stronger <span>digital</span> business.</h1>
-          <p class="hero-copy">Practical digital services to help your business look professional, reach more customers, and work smarter—from websites and apps to business tools and creative design.</p>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Technology company · Digital platform</span>
+          <h1>Technology for everyday life. <span>All in one place.</span></h1>
+          <p class="hero-copy">Discover useful online tools and digital experiences, while getting websites, apps and technology solutions built for your needs.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#services">Explore Our Services <span aria-hidden="true">→</span></a>
-            <a class="btn btn-secondary" href="#contact">Talk to Our Team</a>
+            <a class="btn btn-primary" href="#platform">Explore the Platform <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="#services">Technology Services</a>
           </div>
           <div class="trust-row">
-            <span><b>✓</b> Mobile-friendly solutions</span>
-            <span><b>✓</b> Practical business support</span>
+            <span><b>✓</b> Useful tools for everyone</span>
+            <span><b>✓</b> Digital solutions for businesses</span>
           </div>
         </div>
         <div class="visual-wrap" aria-label="Digital services dashboard illustration">
           <div class="visual-panel">
             <div class="panel-top">
-              <span class="panel-label">Your digital workspace</span>
+              <span class="panel-label">MDS digital ecosystem</span>
               <span class="status">● Ready to build</span>
             </div>
             <h2 class="panel-heading">Ideas into digital<br>experiences.</h2>
-            <p class="panel-sub">One place for the tools your business needs.</p>
+            <p class="panel-sub">Explore tools, services and digital experiences.</p>
             <div class="dashboard">
-              <div class="dash-tile"><div class="dash-icon">⌘</div><strong>Websites</strong><small>Professional online presence</small></div>
-              <div class="dash-tile"><div class="dash-icon">▣</div><strong>Applications</strong><small>Useful digital products</small></div>
-              <div class="dash-tile"><div class="dash-icon">▤</div><strong>Business Tools</strong><small>Smarter daily workflows</small></div>
-              <div class="dash-tile"><div class="dash-icon">✦</div><strong>Creative Design</strong><small>Consistent brand visuals</small></div>
+              <div class="dash-tile"><div class="dash-icon">⌘</div><strong>Online Tools</strong><small>Useful everyday utilities</small></div>
+              <div class="dash-tile"><div class="dash-icon">▣</div><strong>AI &amp; Apps</strong><small>Explore digital experiences</small></div>
+              <div class="dash-tile"><div class="dash-icon">▤</div><strong>Business</strong><small>Tools that help you grow</small></div>
+              <div class="dash-tile"><div class="dash-icon">✦</div><strong>Technology</strong><small>Websites and software</small></div>
             </div>
           </div>
           <div class="floating-note">
             <div class="note-icon">↗</div>
-            <div><strong>Designed for real businesses</strong><small>Clear, useful, and professional</small></div>
+            <div><strong>Made for everyday users</strong><small>Simple, useful digital access</small></div>
           </div>
         </div>
       </div>
     </section>
 
+
+    <section id="platform" class="platform-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Explore MDS</span>
+          <h2>One platform. More ways to get things done.</h2>
+          <p>A growing collection of practical digital tools and experiences for everyday users, students, creators and businesses.</p>
+        </div>
+        <div class="platform-grid">
+          <a class="platform-card" href="#quick-tools"><span class="platform-icon">⌁</span><span class="platform-tag">Everyday use</span><h3>Online Tools</h3><p>Calculators and simple utilities that help with everyday tasks.</p><span class="platform-link">Try quick tools ↗</span></a>
+          <a class="platform-card" href="#quick-tools"><span class="platform-icon">✦</span><span class="platform-tag">Discover</span><h3>AI &amp; Digital</h3><p>A place to explore useful AI-powered and digital experiences.</p><span class="platform-link">Explore tools ↗</span></a>
+          <a class="platform-card" href="#services"><span class="platform-icon">▣</span><span class="platform-tag">For businesses</span><h3>Business Solutions</h3><p>Websites, apps and digital systems for local businesses and teams.</p><span class="platform-link">View services ↗</span></a>
+          <a class="platform-card" href="#contact"><span class="platform-icon">◎</span><span class="platform-tag">Get support</span><h3>Digital Help</h3><p>Get assistance with setting up and using digital services.</p><span class="platform-link">Contact MDS ↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="quick-tools" class="quick-tools-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Free quick tools</span>
+          <h2>Useful tools, right here.</h2>
+          <p>Try these simple utilities directly on this website. No account required.</p>
+        </div>
+        <div class="quick-tools-grid">
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">％</span><div><h3>Percentage Calculator</h3><p>Calculate a percentage of any number.</p></div></div>
+            <label for="percent-value">What is the value?</label><input id="percent-value" type="number" inputmode="decimal" placeholder="e.g. 500">
+            <label for="percent-rate">Percentage (%)</label><input id="percent-rate" type="number" inputmode="decimal" placeholder="e.g. 18">
+            <div class="tool-result" id="percent-result" aria-live="polite">Your result will appear here.</div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">₹</span><div><h3>GST Calculator</h3><p>Estimate GST-inclusive amounts.</p></div></div>
+            <label for="gst-amount">Amount (₹)</label><input id="gst-amount" type="number" inputmode="decimal" placeholder="e.g. 1000">
+            <label for="gst-rate">GST rate</label><select id="gst-rate"><option value="5">5%</option><option value="12">12%</option><option value="18" selected>18%</option><option value="28">28%</option></select>
+            <div class="tool-result" id="gst-result" aria-live="polite">Enter an amount to calculate GST.</div>
+          </article>
+          <article class="tool-card">
+            <div class="tool-heading"><span class="tool-icon">Aa</span><div><h3>Word Counter</h3><p>Count words and characters in your text.</p></div></div>
+            <label for="word-input">Your text</label><textarea id="word-input" rows="4" placeholder="Start typing or paste your text..."></textarea>
+            <div class="tool-result" id="word-result" aria-live="polite">0 words · 0 characters</div>
+          </article>
+        </div>
+      </div>
+    </section>
     <section id="services">
       <div class="container">
         <div class="section-heading">
-          <span class="section-kicker">What we do</span>
-          <h2>Digital services built around your needs.</h2>
+          <span class="section-kicker">MDS technology company</span>
+          <h2>We build digital solutions for people and businesses.</h2>
           <p>Choose the support that fits your business today, with practical solutions designed to grow with you.</p>
         </div>
         <div class="services-grid">
@@ -325,8 +396,8 @@
         <div class="about-copy">
           <span class="section-kicker">About us</span>
           <h2>A reliable digital partner for your next step.</h2>
-          <p>Manish Digital Service helps local businesses and growing teams make better use of digital tools. We focus on clear communication, practical setup, and solutions shaped around the way your business works.</p>
-          <p>Whether you are building your first website or improving an existing digital setup, we can help you plan the next step.</p>
+          <p>Manish Digital Service brings together practical digital products and technology services. Our goal is to make useful technology easier to access for everyday users while helping businesses build a stronger digital presence.</p>
+          <p>From useful online tools to websites, apps and business systems, MDS is being developed as one connected digital destination.</p>
           <a class="btn btn-primary about-cta" href="#contact">Discuss Your Project <span aria-hidden="true">→</span></a>
         </div>
         <div class="benefits">
@@ -368,6 +439,16 @@
   </footer>
 
   <script>
+
+    const pv=document.getElementById('percent-value'),pr=document.getElementById('percent-rate'),po=document.getElementById('percent-result');
+    function calcPercent(){if(pv.value===''||pr.value===''){po.textContent='Enter both values to calculate.';return;}po.textContent='Result: '+(Number(pv.value)*Number(pr.value)/100).toLocaleString('en-IN',{maximumFractionDigits:2});}
+    pv.addEventListener('input',calcPercent);pr.addEventListener('input',calcPercent);
+    const ga=document.getElementById('gst-amount'),gr=document.getElementById('gst-rate'),go=document.getElementById('gst-result');
+    function calcGST(){if(ga.value===''){go.textContent='Enter an amount to calculate GST.';return;}const amount=Number(ga.value),tax=amount*Number(gr.value)/100;go.textContent='GST: ₹'+tax.toLocaleString('en-IN',{maximumFractionDigits:2})+' · Total: ₹'+(amount+tax).toLocaleString('en-IN',{maximumFractionDigits:2});}
+    ga.addEventListener('input',calcGST);gr.addEventListener('change',calcGST);
+    const wi=document.getElementById('word-input'),wo=document.getElementById('word-result');
+    wi.addEventListener('input',()=>{const s=wi.value.trim(),n=s?s.split(/\s+/).length:0;wo.textContent=n+' words · '+wi.value.length+' characters';});
+
     const menuButton = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('.nav-links');
     menuButton.addEventListener('click', () => {
